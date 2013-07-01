@@ -1,11 +1,14 @@
 {
   "name": "html-puzzle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny, easy to use, html grabber",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "BSD"
+  "author": "Mauro Bolis <mauro@plasticpanda.com>",
+  "license": "BSD",
+  "dependencies": {
+    "async": "~0.2.9",
+    "request": "~2.21.0",
+    "cheerio": "~0.12.0",
+    "coolog": "~0.1.6"
+  }
 }
