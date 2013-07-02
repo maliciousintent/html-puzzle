@@ -20,7 +20,7 @@ grabber.grab('http://www.google.it', function(err, page) {
 
 ## Todo ##
 
-* Embed javascript files
-* Embed css files
 * Add javascript blacklist (eg: google analytics..)
 * Test performances
+* Fix problem with js-loaded resources
+* Test with strange characters
