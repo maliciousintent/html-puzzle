@@ -1,21 +1,24 @@
+/*jshint node:true, laxcomma:true, indent:2, white:true, curly:true, plusplus:true, undef:true, strict:true, trailing:true */
+'use strict';
+
 var grabber = require('./index')
   , fs = require('fs')
   , options;
 
 options = {
-    'url' : 'https://github.com/plasticpanda/html-puzzle',
+    'url' : 'http://www.partitonuovademocrazia.it/',
     'createSnapshot' : true,
     'imageFormat' : 'PNG'
 };
 
-grabber.grab(options, function(err, page) {
+grabber.grab(options, function (err, page) {
   
   fs.writeFile('result.html', page.html, function (err) {
     if (err) throw err;
     console.log('Page saved');
   });
 
-  fs.writeFile("snap.png", new Buffer(page.image, "base64"), "binary", function(err) {
+  fs.writeFile("snap.png", new Buffer(page.image, "base64"), "binary", function (err) {
     if (err) throw err;
     console.log('Image saved');
   });
