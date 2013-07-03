@@ -1,11 +1,22 @@
 var grabber = require('./index')
-  , fs = require('fs');
+  , fs = require('fs')
+  , options;
 
-grabber.grab('http://stackoverflow.com/questions/10940273/how-can-i-read-a-file-encoded-in-utf-16-in-nodejs', function(err, page) {
+options = {
+    'url' : 'https://github.com/plasticpanda/html-puzzle',
+    'createSnapshot' : true,
+    'imageFormat' : 'PNG'
+};
+
+grabber.grab(options, function(err, page) {
   
-  fs.writeFile('result.html', page, function (err) {
+  fs.writeFile('result.html', page.html, function (err) {
     if (err) throw err;
     console.log('Page saved');
   });
 
+  fs.writeFile("snap.png", new Buffer(page.image, "base64"), "binary", function(err) {
+    if (err) throw err;
+    console.log('Image saved');
+  });
 });
