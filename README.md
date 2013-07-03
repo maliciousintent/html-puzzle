@@ -15,7 +15,7 @@ Not yet
 ## Use ##
 
 ```nodejs
-var grabber = require('./index')
+var grabber = require('html-puzzle')
   , options;
 
 options = {
@@ -26,8 +26,11 @@ options = {
 
 grabber.grab(options, function(err, page) {
   // do awesome stuff
+  // page.html contains the html code
+  // page.image contains the base64 encoded image
 });
 ```
+See test.js for more information.
 
 ## Todo ##
 
