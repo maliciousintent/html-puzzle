@@ -1,37 +1,45 @@
-/*jshint node:true, laxcomma:true, indent:2, white:true, curly:true, plusplus:true, undef:true, strict:true, trailing:true */
+/*jshint node:true, laxcomma:true, indent:2, white:true, curly:true, undef:true, strict:true, trailing:true, eqnull:true */
+
 'use strict';
 
 var grabber = require('../index')
-  , fs = require('fs')
-  , options;
+  , fs = require('fs');
+  
 
-options = {
-  'url' : 'http://www.arstechnica.com/',
-  'createSnapshot' : true,
-  'imageFormat' : 'PNG'
+if (!fs.existsSync('out')) {
+  fs.mkdirSync('out');
+}
+
+var imageFormat = 'jpeg'
+  , options = {
+  url: 'http://www.arstechnica.com/',
+  createSnapshot: true,
+  createHTML: true,
+  imageFormat: imageFormat
 };
-
-
-fs.mkdirSync('out');
 
 grabber.grab(options, function (err, page) {
   if (err) {
     throw err;
   }
   
-  fs.writeFile('out/result.html', page.html, function (err) {
-    if (err) {
-      throw err;
-    }
-    
-    console.log('Page saved');
-  });
+  if (page.html != null) {
+    fs.writeFile('out/result.html', page.html, function (err) {
+      if (err) {
+        throw err;
+      }
+      
+      console.log('Page saved');
+    });
+  }
 
-  fs.writeFile('out/snap.png', new Buffer(page.image, 'base64'), 'binary', function (err) {
-    if (err) {
-      throw err;
-    }
-    
-    console.log('Image saved');
-  });
+  if (page.image != null) {
+    fs.writeFile('out/snap.' + imageFormat, new Buffer(page.image, 'base64'), 'binary', function (err) {
+      if (err) {
+        throw err;
+      }
+      
+      console.log('Image saved');
+    });
+  }
 });

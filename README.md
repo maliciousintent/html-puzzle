@@ -34,6 +34,13 @@ grabber.grab(options, function(err, page) {
 ```
 See test.js for more information.
 
+## Performance ##
+
+Time to grab [arstechnica.com](http://www.arstechnica.com) using a 100Mbps fiber connection on a Virtual Machine (512MB RAM, 1 core).
+
+![time](https://github.com/plasticpanda/html-puzzle/blob/master/tests/time.png)
+
+
 ## Todo ##
 
 * Add javascript blacklist (eg: google analytics..)
