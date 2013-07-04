@@ -11,12 +11,15 @@ options = {
   'imageFormat' : 'PNG'
 };
 
+
+fs.mkdirSync('out');
+
 grabber.grab(options, function (err, page) {
   if (err) {
     throw err;
   }
   
-  fs.writeFile('result.html', page.html, function (err) {
+  fs.writeFile('out/result.html', page.html, function (err) {
     if (err) {
       throw err;
     }
@@ -24,7 +27,7 @@ grabber.grab(options, function (err, page) {
     console.log('Page saved');
   });
 
-  fs.writeFile("snap.png", new Buffer(page.image, "base64"), "binary", function (err) {
+  fs.writeFile('out/snap.png', new Buffer(page.image, 'base64'), 'binary', function (err) {
     if (err) {
       throw err;
     }
