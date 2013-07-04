@@ -6,20 +6,29 @@ var grabber = require('./index')
   , options;
 
 options = {
-    'url' : 'http://www.partitonuovademocrazia.it/',
-    'createSnapshot' : true,
-    'imageFormat' : 'PNG'
+  'url' : 'http://www.arstechnica.com/',
+  'createSnapshot' : true,
+  'imageFormat' : 'PNG'
 };
 
 grabber.grab(options, function (err, page) {
+  if (err) {
+    throw err;
+  }
   
   fs.writeFile('result.html', page.html, function (err) {
-    if (err) throw err;
+    if (err) {
+      throw err;
+    }
+    
     console.log('Page saved');
   });
 
   fs.writeFile("snap.png", new Buffer(page.image, "base64"), "binary", function (err) {
-    if (err) throw err;
+    if (err) {
+      throw err;
+    }
+    
     console.log('Image saved');
   });
 });
