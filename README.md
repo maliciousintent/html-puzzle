@@ -9,7 +9,9 @@ PhantomJS (if you want to create a page snapshot)
 
 ## Install ##
 
-Not yet
+```bash
+npm -S install html-puzzle
+```
 
 
 ## Use ##
