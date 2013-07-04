@@ -17,22 +17,24 @@ npm -S install html-puzzle
 ## Use ##
 
 ```nodejs
-var grabber = require('html-puzzle')
-  , options;
+var grabber = require('../index');
 
-options = {
-    'url' : 'https://github.com/plasticpanda/html-puzzle',
-    'createSnapshot' : true,
-    'imageFormat' : 'PNG' // could be PNG, GIF or JPEG
+var imageFormat = 'jpeg'
+  , options = {
+  url: 'https://github.com/plasticpanda/html-puzzle',
+  createSnapshot: true,
+  createHTML: true,
+  imageFormat: imageFormat
 };
 
-grabber.grab(options, function(err, page) {
+grabber.grab(options, function (err, page) {
   // do awesome stuff
   // page.html contains the html code
   // page.image contains the base64 encoded image
 });
+
 ```
-See test.js for more information.
+See tests/test.js for more information.
 
 ## Performance ##
 
@@ -50,7 +52,7 @@ Time to grab [arstechnica.com](http://www.arstechnica.com) using a 100Mbps fiber
 
 ## License ##
 
-Copyright (c) 2013 PlasticPanda.com, Mauro Bolis <mauro@plasticpanda.com>
+Copyright (c) 2013 PlasticPanda.com, Mauro Bolis <mauro@plasticpanda.com>, Simone Lusenti <simone@plasticpanda.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
