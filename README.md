@@ -21,16 +21,18 @@ var grabber = require('../index');
 
 var imageFormat = 'jpeg'
   , options = {
-  url: 'https://github.com/plasticpanda/html-puzzle',
-  createSnapshot: true,
-  createHTML: true,
-  imageFormat: imageFormat
-};
+      url: 'http://www.arstechnica.com/',
+      createSnapshot: false,
+      createHTML: false,
+      imageFormat: imageFormat,
+      createZip : true
+    };
 
 grabber.grab(options, function (err, page) {
   // do awesome stuff
-  // page.html contains the html code
-  // page.image contains the base64 encoded image
+  // page.html contains the html code (if createHTML is true)
+  // page.image contains the base64 encoded image (if createSnapshot is true)
+  // page.zip contains a zip file (binary, if createZip is true)
 });
 
 ```

@@ -12,24 +12,33 @@ if (!fs.existsSync('out')) {
 
 var imageFormat = 'jpeg'
   , options = {
-  url: 'http://www.arstechnica.com/',
-  createSnapshot: true,
-  createHTML: true,
-  imageFormat: imageFormat
-};
+      url: 'http://www.arstechnica.com/',
+      createSnapshot: false,
+      createHTML: false,
+      imageFormat: imageFormat,
+      createZip : true
+    };
 
 grabber.grab(options, function (err, page) {
   if (err) {
     throw err;
   }
   
-  if (page.html != null) {
-    fs.writeFile('out/result.zip', page.html, 'binary', function (err) {
+  if (page.zip != null) {
+    fs.writeFile('out/result.zip', page.zip, 'binary', function (err) {
       if (err) {
         throw err;
       }
-      
-      console.log('Page saved');
+      console.log('Archive saved');
+    });
+  }
+
+  if (page.html != null) {
+    fs.writeFile('out/page.html', page.html, 'binary', function (err) {
+      if (err) {
+        throw err;
+      }
+      console.log('Html saved');
     });
   }
 
