@@ -38,7 +38,7 @@ See test.js for more information.
 
 Time to grab [arstechnica.com](http://www.arstechnica.com) using a 100Mbps fiber connection on a Virtual Machine (512MB RAM, 1 core).
 
-![time](https://github.com/plasticpanda/html-puzzle/blob/master/tests/time.png)
+![time](https://raw.github.com/plasticpanda/html-puzzle/master/tests/time.png)
 
 
 ## Todo ##
