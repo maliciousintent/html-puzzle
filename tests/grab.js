@@ -24,7 +24,7 @@ grabber.grab(options, function (err, page) {
   }
   
   if (page.html != null) {
-    fs.writeFile('out/result.html', page.html, function (err) {
+    fs.writeFile('out/result.zip', page.html, 'binary', function (err) {
       if (err) {
         throw err;
       }
