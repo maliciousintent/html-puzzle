@@ -13,8 +13,8 @@ if (!fs.existsSync('out')) {
 var imageFormat = 'jpeg'
   , options = {
       url: 'http://www.arstechnica.com/',
-      createSnapshot: false,
-      createHTML: false,
+      createSnapshot: true,
+      createHTML: true,
       imageFormat: imageFormat,
       createZip : true
     };
