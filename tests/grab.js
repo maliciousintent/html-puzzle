@@ -1,7 +1,7 @@
 /*jshint node:true, laxcomma:true, indent:2, white:true, curly:true, plusplus:true, undef:true, strict:true, trailing:true */
 'use strict';
 
-var grabber = require('./index')
+var grabber = require('../index')
   , fs = require('fs')
   , options;
 
