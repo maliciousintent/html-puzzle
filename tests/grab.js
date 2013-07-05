@@ -12,7 +12,7 @@ if (!fs.existsSync('out')) {
 
 var imageFormat = 'jpeg'
   , options = {
-      url: 'http://arstechnica.com/',
+      url: 'https://github.com/plasticpanda/html-puzzle',
       createSnapshot: true,
       createHTML: true,
       imageFormat: imageFormat,

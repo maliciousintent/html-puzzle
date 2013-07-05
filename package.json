@@ -1,10 +1,10 @@
 {
   "name": "html-puzzle",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A tiny, easy to use, html grabber",
   "main": "index.js",
   "author": "Mauro Bolis <mauro@plasticpanda.com>",
-  "contributors" : [
+  "contributors": [
     "Simone Lusenti <simone@plasticpanda>"
   ],
   "dependencies": {
@@ -14,7 +14,8 @@
     "coolog": "~0.1.6",
     "node-phantom": "~0.2.3",
     "adm-zip": "~0.4.3",
-    "node-phantom": "~0.2.3"
+    "cssom": "~0.2.5",
+    "css": "~1.4.0"
   },
   "repository": {
     "type": "git",

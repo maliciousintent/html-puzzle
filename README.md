@@ -48,7 +48,7 @@ Time to grab [arstechnica.com](http://www.arstechnica.com) using a 100Mbps fiber
 ## Todo ##
 
 * Add javascript blacklist (eg: google analytics..)
-* Fix problem with js/css loaded resources
+* Fix problem with js loaded resources
 * Test with strange characters
 * Test performances
 
