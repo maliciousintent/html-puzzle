@@ -19,13 +19,15 @@ npm -S install html-puzzle
 ```nodejs
 var grabber = require('../index');
 
-var imageFormat = 'jpeg'
+var imageFormat = 'png'
   , options = {
-      url: 'http://www.arstechnica.com/',
+      url: 'http://arstechnica.com/',
       createSnapshot: true,
       createHTML: true,
       imageFormat: imageFormat,
-      createZip : true
+      createZip : true,
+      insertWatermark : true,
+      watermarkText : 'created using html-puzzle'
     };
 
 grabber.grab(options, function (err, page) {

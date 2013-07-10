@@ -10,13 +10,15 @@ if (!fs.existsSync('out')) {
   fs.mkdirSync('out');
 }
 
-var imageFormat = 'jpeg'
+var imageFormat = 'png'
   , options = {
-      url: 'https://github.com/plasticpanda/html-puzzle',
+      url: 'http://arstechnica.com/',
       createSnapshot: true,
       createHTML: true,
       imageFormat: imageFormat,
-      createZip : true
+      createZip : true,
+      insertWatermark : true,
+      watermarkText : 'created using html-puzzle'
     };
 
 grabber.grab(options, function (err, page) {

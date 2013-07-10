@@ -15,7 +15,8 @@
     "node-phantom": "~0.2.3",
     "adm-zip": "~0.4.3",
     "cssom": "~0.2.5",
-    "css": "~1.4.0"
+    "css": "~1.4.0",
+    "canvas": "~1.0.3"
   },
   "repository": {
     "type": "git",
