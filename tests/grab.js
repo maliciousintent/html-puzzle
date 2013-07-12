@@ -12,7 +12,7 @@ if (!fs.existsSync('out')) {
 
 var imageFormat = 'png'
   , options = {
-      url: 'http://arstechnica.com/',
+      url: 'http://plasticpanda.com/',
       createSnapshot: true,
       createHTML: true,
       imageFormat: imageFormat,
