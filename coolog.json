@@ -1,0 +1,8 @@
+{
+  "channels": {
+    "root": {
+      "level": "debug",
+      "appenders": ["coolog-appender-logentries"]
+    },
+  }
+}

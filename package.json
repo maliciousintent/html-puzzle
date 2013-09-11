@@ -11,7 +11,7 @@
     "async": "~0.2.9",
     "request": "~2.21.0",
     "cheerio": "~0.12.0",
-    "coolog": "~0.1.6",
+    "coolog": "~2.1.2",
     "node-phantom": "~0.2.3",
     "adm-zip": "~0.4.3",
     "cssom": "~0.2.5",
